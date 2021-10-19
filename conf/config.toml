@@ -1,0 +1,15 @@
+
+
+[mysql]
+hostname = "localhost"
+user = "root"
+port = 3306
+password = "123"
+db = "Daily-recommend"
+
+[juhe]
+key = "8283b11d17615debf2a3c96f99ebe3c1"
+type = "top"
+page = 1
+pageSize = 30
+is_filter = 1
