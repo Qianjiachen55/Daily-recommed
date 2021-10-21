@@ -14,7 +14,10 @@ var (
 )
 
 func MysqlInit() *gorm.DB {
-
+	once.Do(func() {
+		mysqlConInstance = mysqlInit()
+	})
+	return mysqlConInstance
 }
 
 func mysqlInit() *gorm.DB {

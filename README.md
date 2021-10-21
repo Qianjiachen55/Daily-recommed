@@ -19,4 +19,8 @@
 ```shell
 21.10.22.12.11
 修改 utils/error.go :添加处理错误和panic的方法,defer PanicFun() 记录panic到日志中 
+
+21.10.22.12.14
+完善 global/mysql.go : 完善
+
 ```
