@@ -3,7 +3,7 @@
 [mysql]
 hostname = "localhost"
 user = "root"
-port = 3306
+port = "3306"
 password = "123"
 db = "Daily-recommend"
 
@@ -13,3 +13,10 @@ type = "top"
 page = 1
 pageSize = 30
 is_filter = 1
+
+[email]
+username = "qianjiachen@happywater.xyz"
+pass = "Chen0219"
+host = "smtp.exmail.qq.com"
+port =  465
+name = "qjc"
