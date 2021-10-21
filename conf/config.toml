@@ -18,5 +18,5 @@ is_filter = 1
 username = "qianjiachen@happywater.xyz"
 pass = "Chen0219"
 host = "smtp.exmail.qq.com"
-port =  465
+port =  "465"
 name = "qjc"

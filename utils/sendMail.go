@@ -1,6 +1,9 @@
 package utils
 
-import "gopkg.in/gomail.v2"
+import (
+	"github.com/spf13/cast"
+	"gopkg.in/gomail.v2"
+)
 
 type Mail struct {
 	username string
@@ -8,6 +11,16 @@ type Mail struct {
 	host     string
 	port     int
 	name     string
+}
+
+func InitMail(username string,pass string,host string,port string,name string) *Mail {
+	return &Mail{
+		username: username,
+		pass:     pass,
+		host:     host,
+		port:     cast.ToInt(port),
+		name:     name,
+	}
 }
 
 
