@@ -1,4 +1,4 @@
 .idea
 test
-conf/config.toml
+conf/
 */*_test.go
