@@ -26,7 +26,14 @@
 21.10.22.12.39
 init/(logger&mail&mysql).go    全都添加
 
+
+21.10.23.1.5
+/ url跑通 && 并且自动创建了db和table && docker-compose完成
+
+
 ```
+
+
 
 ### 记录其他
 ```shell
