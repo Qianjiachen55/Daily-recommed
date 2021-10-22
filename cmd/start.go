@@ -17,7 +17,13 @@ package cmd
 
 import (
 	"fmt"
+	"github.com/Qianjiachen55/Daily-recommed/global"
+	"github.com/Qianjiachen55/Daily-recommed/initalize"
+	"github.com/Qianjiachen55/Daily-recommed/routers"
+	"github.com/gin-contrib/zap"
+	"github.com/gin-gonic/gin"
 	"github.com/spf13/cobra"
+	"time"
 )
 
 // startCmd represents the start command
@@ -36,6 +42,36 @@ to quickly create a Cobra application.`,
 func runStart(cmd *cobra.Command,args []string)  {
 	fmt.Println("starting......")
 
+	initConf()
+	engine := initGinEngine()
+
+	initRoute(engine)
+
+	if err := engine.Run(":8080");err!=nil{
+		panic(err)
+	}
+
+	global.DrLogger.Info("init success!!!!!")
+
+}
+func initGinEngine() *gin.Engine {
+	engine := gin.New()
+	engine.Use(ginzap.Ginzap(global.DrLogger,time.RFC3339,true))
+	engine.Use(ginzap.RecoveryWithZap(global.DrLogger,true))
+
+	return engine
+}
+
+func initRoute(engine *gin.Engine)  {
+	routers.LoadRootRouter(engine)
+
+}
+
+
+func initConf()  {
+	global.DrLogger = initalize.Logger()
+	global.DrMysql = initalize.MysqlInit()
+	global.DrMail = initalize.MailInit()
 }
 
 func init() {

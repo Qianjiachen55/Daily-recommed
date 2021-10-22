@@ -3,6 +3,8 @@ module github.com/Qianjiachen55/Daily-recommed
 go 1.16
 
 require (
+	github.com/gin-contrib/zap v0.0.1
+	github.com/gin-gonic/gin v1.7.4
 	github.com/spf13/cast v1.4.1
 	github.com/spf13/cobra v1.2.1
 	github.com/spf13/viper v1.9.0

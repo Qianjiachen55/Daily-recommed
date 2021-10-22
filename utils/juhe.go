@@ -45,18 +45,17 @@ func GetNewsFromJuhe(key string, newsType string, page int, pageSize int, isFilt
 	defer resp.Body.Close()
 
 	body,_ := ioutil.ReadAll(resp.Body)
-
 	return cast.ToString(body)
 }
 
-func init()  {
-	viper.AddConfigPath("../conf")
-	viper.SetConfigType("toml")
-	viper.SetConfigName("config")
-	viper.AutomaticEnv()
-
-	if err := viper.ReadInConfig(); err != nil {
-		fmt.Println("error:", err)
-		panic(err)
-	}
-}
+//func init()  {
+//	viper.AddConfigPath("../conf")
+//	viper.SetConfigType("toml")
+//	viper.SetConfigName("config")
+//	viper.AutomaticEnv()
+//
+//	if err := viper.ReadInConfig(); err != nil {
+//		fmt.Println("error:", err)
+//		panic(err)
+//	}
+//}

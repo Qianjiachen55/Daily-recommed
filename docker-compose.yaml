@@ -1,9 +1,21 @@
 version: "3.0"
 
 services:
-  db-mysql:
+  Dr-db-mysql:
+    restart: always
     image: mysql/mysql-server
     container_name: DailyRecommend
     volumes:
-      - ./conf/.mysql/my.cnf:/etc/my.cnf
-      - ./initalize/mysql-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+      - ${PWD}/conf/mysql:/etc/mysql/conf.d
+      - ${PWD}/initalize/mysql-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+
+    expose:
+      - 3306
+    ports:
+      - "33060:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: "123"
+#
+#    networks:
+#      - mynetwork
+

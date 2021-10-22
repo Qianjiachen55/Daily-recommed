@@ -5,33 +5,28 @@ import (
 	"go.uber.org/zap/zapcore"
 	"gopkg.in/natefinch/lumberjack.v2"
 	"os"
-	"sync"
 	"time"
 )
 
 var (
 	logInstance *zap.Logger
-	once sync.Once
 )
 
 func Logger() *zap.Logger {
-	once.Do(func() {
-		logInstance = logger()
-	})
+	logInstance = logger()
 
 	return logInstance
 }
 
-
-func logger()  *zap.Logger{
+func logger() *zap.Logger {
 	//配置logger
 	// 正确日志输出到文件
 	infoWriter := lumberjack.Logger{
-		Filename:   "log/info.log",
+		Filename: "log/info.log",
 	}
 	// 错误日志输出到文件
 	errorWriter := lumberjack.Logger{
-		Filename:    "log/error.log",
+		Filename: "log/error.log",
 	}
 
 	// 日志输出格式
