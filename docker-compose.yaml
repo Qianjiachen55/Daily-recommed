@@ -1,0 +1,9 @@
+version: "3.0"
+
+services:
+  db-mysql:
+    image: mysql/mysql-server
+    container_name: DailyRecommend
+    volumes:
+      - ./conf/.mysql/my.cnf:/etc/my.cnf
+      - ./initalize/mysql-entrypoint-initdb.d:/docker-entrypoint-initdb.d
