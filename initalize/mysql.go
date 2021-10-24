@@ -35,7 +35,6 @@ func mysqlInit() *gorm.DB {
 		port,
 		db,
 	)
-
 	msqlDb, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	if err != nil {
 		utils.PaincFun(global.DrLogger)
