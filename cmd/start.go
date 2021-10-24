@@ -64,6 +64,7 @@ func initGinEngine() *gin.Engine {
 
 func initRoute(engine *gin.Engine)  {
 	routers.LoadRootRouter(engine)
+	routers.LoadNewsRouters(engine)
 
 }
 
