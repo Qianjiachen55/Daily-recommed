@@ -6,11 +6,13 @@ import (
 
 type News struct {
 	UniqueKey     string `json:"unique_key" gorm:"primaryKey"`
+	Category      string `json:"category"`
 	Title         string `json:"title"`
 	Date          string `json:"date"`
 	AuthorName    string `json:"authorName"`
 	Url           string `json:"url"`
 	ThumbnailPicS string `json:"thumbnail_pic_s"`
+
 }
 
 func Query(query string, by string, model interface{})  error {

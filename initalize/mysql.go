@@ -5,6 +5,7 @@ import (
 	"github.com/Qianjiachen55/Daily-recommed/global"
 	"github.com/Qianjiachen55/Daily-recommed/model"
 	"github.com/Qianjiachen55/Daily-recommed/utils"
+	"github.com/spf13/cast"
 	"github.com/spf13/viper"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
@@ -42,7 +43,13 @@ func mysqlInit() *gorm.DB {
 
 	//初始化数据库
 	if err := msqlDb.AutoMigrate(&model.News{}); err != nil {
-		utils.PaincFun(global.DrLogger)
+		global.DrLogger.Error(cast.ToString(err))
+	}
+	if err := msqlDb.AutoMigrate(&model.User{}); err != nil {
+		global.DrLogger.Error(cast.ToString(err))
+	}
+	if err := msqlDb.AutoMigrate(&model.UserAction{}); err != nil {
+		global.DrLogger.Error(cast.ToString(err))
 	}
 	global.DrLogger.Info("init mysql")
 

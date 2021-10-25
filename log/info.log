@@ -1,24 +1,9 @@
-{"level":"info","time":"2021-10-24T22:23:44.419+0800","msg":"init mysql","uuid":1635085424}
-{"level":"info","time":"2021-10-24T22:23:44.419+0800","msg":"email init","uuid":1635085424}
-{"level":"info","time":"2021-10-24T22:23:46.450+0800","msg":"/api/news/","uuid":1635085424,"status":404,"method":"GET","path":"/api/news/","query":"uk=qwefqwer","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36","time":"2021-10-24T14:23:46Z","latency":0.000066958}
-{"level":"error","time":"2021-10-24T22:29:11.175+0800","msg":"uk is nil","uuid":1635085424}
-{"level":"info","time":"2021-10-24T22:29:11.176+0800","msg":"uk :","uuid":1635085424}
-{"level":"info","time":"2021-10-24T22:29:11.180+0800","msg":"redirect:https:\\/\\/mini.eastday.com\\/mobile\\/211023124837005114652.html","uuid":1635085424}
-{"level":"info","time":"2021-10-24T22:29:11.180+0800","msg":"/api/news/qwefqwer","uuid":1635085424,"status":301,"method":"GET","path":"/api/news/qwefqwer","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36","time":"2021-10-24T14:29:11Z","latency":0.005494916}
-{"level":"info","time":"2021-10-24T22:29:53.987+0800","msg":"init mysql","uuid":1635085793}
-{"level":"info","time":"2021-10-24T22:29:53.987+0800","msg":"email init","uuid":1635085793}
-{"level":"info","time":"2021-10-24T22:29:57.829+0800","msg":"uk :qwefqwer","uuid":1635085793}
-{"level":"error","time":"2021-10-24T22:29:57.846+0800","msg":"record not found","uuid":1635085793}
-{"level":"error","time":"2021-10-24T22:29:57.847+0800","msg":"uk :qwefqwer no exits!!","uuid":1635085793}
-{"level":"info","time":"2021-10-24T22:29:57.847+0800","msg":"/api/news/qwefqwer","uuid":1635085793,"status":200,"method":"GET","path":"/api/news/qwefqwer","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36","time":"2021-10-24T14:29:57Z","latency":0.018561}
-{"level":"info","time":"2021-10-24T22:30:31.261+0800","msg":"uk :qwefqwer","uuid":1635085793}
-{"level":"error","time":"2021-10-24T22:30:31.266+0800","msg":"record not found","uuid":1635085793}
-{"level":"error","time":"2021-10-24T22:30:31.266+0800","msg":"uk :qwefqwer no exits!!","uuid":1635085793}
-{"level":"info","time":"2021-10-24T22:30:31.266+0800","msg":"/api/news/qwefqwer","uuid":1635085793,"status":200,"method":"GET","path":"/api/news/qwefqwer","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36","time":"2021-10-24T14:30:31Z","latency":0.004369583}
-{"level":"info","time":"2021-10-24T22:30:31.934+0800","msg":"uk :qwefqwer","uuid":1635085793}
-{"level":"error","time":"2021-10-24T22:30:31.939+0800","msg":"record not found","uuid":1635085793}
-{"level":"error","time":"2021-10-24T22:30:31.939+0800","msg":"uk :qwefqwer no exits!!","uuid":1635085793}
-{"level":"info","time":"2021-10-24T22:30:31.939+0800","msg":"/api/news/qwefqwer","uuid":1635085793,"status":200,"method":"GET","path":"/api/news/qwefqwer","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36","time":"2021-10-24T14:30:31Z","latency":0.005418917}
-{"level":"info","time":"2021-10-24T22:30:40.887+0800","msg":"uk :b14033e6f0f65b494a9ab732696438d1","uuid":1635085793}
-{"level":"info","time":"2021-10-24T22:30:40.892+0800","msg":"redirect:https:\\/\\/mini.eastday.com\\/mobile\\/211023124837005114652.html","uuid":1635085793}
-{"level":"info","time":"2021-10-24T22:30:40.892+0800","msg":"/api/news/b14033e6f0f65b494a9ab732696438d1","uuid":1635085793,"status":301,"method":"GET","path":"/api/news/b14033e6f0f65b494a9ab732696438d1","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36","time":"2021-10-24T14:30:40Z","latency":0.005192875}
+{"level":"info","time":"2021-10-25T22:31:08.493+0800","msg":"init mysql","uuid":1635172268}
+{"level":"info","time":"2021-10-25T22:31:08.494+0800","msg":"email init","uuid":1635172268}
+{"level":"info","time":"2021-10-25T22:32:06.851+0800","msg":"init mysql","uuid":1635172326}
+{"level":"info","time":"2021-10-25T22:32:06.852+0800","msg":"email init","uuid":1635172326}
+{"level":"error","time":"2021-10-25T22:33:54.600+0800","msg":"Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1","uuid":1635172434}
+{"level":"info","time":"2021-10-25T22:33:54.600+0800","msg":"init mysql","uuid":1635172434}
+{"level":"info","time":"2021-10-25T22:33:54.600+0800","msg":"email init","uuid":1635172434}
+{"level":"info","time":"2021-10-25T22:38:01.842+0800","msg":"init mysql","uuid":1635172681}
+{"level":"info","time":"2021-10-25T22:38:01.842+0800","msg":"email init","uuid":1635172681}

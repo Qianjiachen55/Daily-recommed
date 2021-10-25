@@ -22,7 +22,6 @@ func News(ctx *gin.Context) {
 	}
 	global.DrLogger.Info(fmt.Sprintf("uk :%s",uk))
 
-	fmt.Println(uk+".................")
 	news, err := service.News(uk)
 	if err != nil {
 		global.DrLogger.Error(fmt.Sprintf("uk :%s no exits!!", uk))

@@ -1,9 +1,9 @@
 package model
 
 type UserAction struct {
-	email string `json:"email"`
-	newsUK string `json:"news_uk"`
-	click bool `json:"click"`
+	Email string `json:"email" gorm:"primaryKey"`
+	NewsUK string `json:"news_uk"`
+	Click bool `json:"click"`
 }
 
 

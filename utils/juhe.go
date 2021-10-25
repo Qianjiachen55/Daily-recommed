@@ -9,20 +9,44 @@ import (
 	"net/url"
 )
 
-func GetNewsFromJuhe(key string, newsType string, page int, pageSize int, isFilter int) string{
-	if key==""{
+type NewsResp struct {
+	Resason    string `json:"reason"`
+	Result     Result `json:"result"`
+	Error_code int    `json:"error_code"`
+}
+type Result struct {
+	Stat     string `json:"stat"`
+	Data     []Data `json:"data"`
+	Page     string `json:"page"`
+	PageSize string `json:"pageSize"`
+}
+type Data struct {
+	Uniquekey       string `json:"uniquekey"`
+	Title           string `json:"title"`
+	Date            string `json:"date"`
+	Category        string `json:"category"`
+	AuthorName      string `json:"author_name"`
+	Url             string `json:"url"`
+	ThumbnailPicS   string `json:"thumbnail_pic_s"`
+	ThumbnailPicS02 string `json:"thumbnail_pics02"`
+	ThumbnailPicS03 string `json:"thumbnail_pic_s03"`
+	IsContent       string `json:"is_content"`
+}
+
+func GetNewsFromJuhe(key string, newsType string, page int, pageSize int, isFilter int) string {
+	if key == "" {
 		key = viper.GetString("juhe.key")
 	}
-	if newsType=="" {
+	if newsType == "" {
 		newsType = viper.GetString("juhe.type")
 	}
-	if page==0 {
+	if page == 0 {
 		page = viper.GetInt("juhe.page")
 	}
-	if pageSize==0{
+	if pageSize == 0 {
 		pageSize = viper.GetInt("juhe.pageSize")
 	}
-	if isFilter==0 {
+	if isFilter == 0 {
 		isFilter = viper.GetInt("juhe.isFilter")
 	}
 	//建立http请求
@@ -33,18 +57,18 @@ func GetNewsFromJuhe(key string, newsType string, page int, pageSize int, isFilt
 	}
 
 	params.Set("key", key)
-	params.Set("type",newsType)
+	params.Set("type", newsType)
 	params.Set("page", cast.ToString(page))
-	params.Set("page_size",cast.ToString( pageSize))
-	params.Set("is_filter",cast.ToString(isFilter))
+	params.Set("page_size", cast.ToString(pageSize))
+	params.Set("is_filter", cast.ToString(isFilter))
 
 	Url.RawQuery = params.Encode()
 	urlPath := Url.String()
 	fmt.Println(urlPath)
-	resp,err := http.Get(urlPath)
+	resp, err := http.Get(urlPath)
 	defer resp.Body.Close()
 
-	body,_ := ioutil.ReadAll(resp.Body)
+	body, _ := ioutil.ReadAll(resp.Body)
 	return cast.ToString(body)
 }
 

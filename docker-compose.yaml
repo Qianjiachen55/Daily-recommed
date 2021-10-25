@@ -8,6 +8,7 @@ services:
     volumes:
       - ${PWD}/conf/mysql:/etc/mysql/conf.d
       - ${PWD}/initalize/mysql-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+      - ${PWD}/volumes/mysql:/var/lib/mysql
 
     expose:
       - 3306
