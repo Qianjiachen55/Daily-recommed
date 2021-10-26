@@ -29,6 +29,11 @@ func QueryNewsByUniqueKey(uniqueKey string) ([]News, error) {
 }
 
 func InsertNews(news News) error {
+	newsS,_:= QueryNewsByUniqueKey(news.UniqueKey)
+	if len(newsS)>0{
+		global.DrLogger.Error(news.UniqueKey+": already exist")
+		return nil
+	}
 
 	result := global.DrMysql.Create(&news)
 
