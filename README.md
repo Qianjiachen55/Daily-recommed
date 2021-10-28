@@ -1,4 +1,7 @@
 # Daily-recommed
+开发ing.........
+
+
 1.0：每天通过api获取一些新闻推荐给邮箱，不经过算法
 
 1.xxxxx 修复bug并测试
