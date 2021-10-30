@@ -2,4 +2,5 @@
 test/
 conf/
 volumes/
+.DS_Store
 */*_test.go

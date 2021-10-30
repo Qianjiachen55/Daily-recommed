@@ -40,7 +40,7 @@ func InitMail(username string,pass string,host string,port string,name string) *
 }
 
 
-func (mail *Mail)SendMail(user []string, body string, subject string) error {
+func (mail *Mail)SendMail(user string, body string, subject string) error {
 	m := gomail.NewMessage()
 
 	//m.SetAddressHeader("From", config.username,config.name)
@@ -48,7 +48,7 @@ func (mail *Mail)SendMail(user []string, body string, subject string) error {
 	//m.SetHeader("From",config.username)
 	//主题
 	m.SetHeader("Subject", subject)
-	m.SetHeader("To", user...)
+	m.SetHeader("To", user)
 	m.SetHeader("recommend","recommend")
 
 	m.SetBody("text/html", body)
